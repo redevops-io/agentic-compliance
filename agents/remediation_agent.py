@@ -2,7 +2,7 @@
 from .guardrails import require_human_approval
 
 class RemediationAgent:
-    def generate(self, findings):
+    def generate(self, findings, approved: bool = False):
+        require_human_approval("apply Ansible remediation", approved=approved)
         playbook = [{"name": "remediate", "hosts": "all", "tasks": []}]
-        require_human_approval("apply Ansible remediation")
         return playbook

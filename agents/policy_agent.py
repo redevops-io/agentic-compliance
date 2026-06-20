@@ -2,7 +2,7 @@
 from .guardrails import require_human_approval
 
 class PolicyAgent:
-    def translate(self, findings):
+    def translate(self, findings, approved: bool = False):
+        require_human_approval("publish Rego policy", approved=approved)
         rego = "package compliance\n\ndefault allow = false"
-        require_human_approval("publish Rego policy")
         return rego
