@@ -1,3 +1,14 @@
+> ### Reference application for [Context Runtime](https://github.com/redevops-io/context-runtime)
+>
+> A focused AI system for **compliance**. Context Runtime ships a tenant that learns **which rule-family evidence to pull per finding** — in its offline benchmark the learned policy scores **3.562 vs 2.463** against a full-evidence baseline ([`examples/agentic_compliance.py`](https://github.com/redevops-io/context-runtime/blob/main/examples/agentic_compliance.py)).
+>
+> ```
+> Context Runtime  →  ReDevOps RAG  →  Sidekick  →  Application logic
+> ```
+> One of the [ReDevOps](https://github.com/redevops-io) reference applications built on Context Runtime.
+
+---
+
 # agentic-compliance — agent layer + dashboard over a real OpenSCAP core
 
 A sibling of [`agents/billing`](../billing/) (the reference pattern), built for the demo
